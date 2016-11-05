@@ -36,7 +36,6 @@ public class FetchMovies extends AsyncTask<String, Void, ArrayList<Movie>> {
 
         String moviesJsonStr = null;
         String sortingCriteria = params[0];
-        //String sortingCriteria = "popularity.desc";
 
         try {
             final String MOVIE_BASE_URL = "http://api.themoviedb.org/3/discover/movie?";
@@ -102,7 +101,7 @@ public class FetchMovies extends AsyncTask<String, Void, ArrayList<Movie>> {
     @Override
     protected void onPostExecute(ArrayList<Movie> movies) {
         super.onPostExecute(movies);
-        if(imageAdapter.getCount() > 0){
+        if (imageAdapter.getCount() > 0) {
             imageAdapter.clear();
         }
         for (int i = 0; i < movies.size(); i++) {
@@ -112,7 +111,6 @@ public class FetchMovies extends AsyncTask<String, Void, ArrayList<Movie>> {
     }
 
     private ArrayList<Movie> getMovieDataFromJson(String moviesStr) throws JSONException {
-        final String MDB_PAGE = "page";
         final String MDB_RESULTS = "results";
         final String MDB_POSTER_PATH = "poster_path";
         final String MDB_ADULT = "adult";

@@ -8,4 +8,6 @@
         <item>Most Popular</item>
         <item>Top Rated</item>
     </string-array>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="release_date">Release Date:</string>
 </resources>

@@ -35,7 +35,7 @@ public class ImageAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return movies.get(position);
     }
 
     @Override
@@ -55,11 +55,11 @@ public class ImageAdapter extends BaseAdapter {
         return movieView;
     }
 
-    public void add(Movie movie){
+    public void add(Movie movie) {
         movies.add(movie);
     }
 
-    public void clear(){
+    public void clear() {
         this.movies.clear();
     }
 }
