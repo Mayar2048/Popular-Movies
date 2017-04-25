@@ -3,5 +3,5 @@
     android:id="@+id/movie_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/movie_padding"
+    android:adjustViewBounds="true"
     android:scaleType="fitXY" />

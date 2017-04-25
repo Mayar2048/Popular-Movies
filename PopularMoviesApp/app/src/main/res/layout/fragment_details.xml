@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.eng_mayar.popularmoviesapp.DetailsFragment">
+        tools:context="com.example.eng_mayar.popularmoviesapp.fragments.DetailsFragment">
 
         <ImageView
             android:id="@+id/movie_thumbnail"
@@ -48,7 +49,8 @@
                 android:max="5"
                 android:numStars="5"
                 android:rating="5.0"
-                android:stepSize="0.5" />
+                android:stepSize="0.5"
+                android:visibility="invisible" />
         </LinearLayout>
 
         <LinearLayout
@@ -57,10 +59,12 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/release_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/release_date"
-                android:textAppearance="?android:textAppearanceMedium" />
+                android:textAppearance="?android:textAppearanceMedium"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/movie_release_date"
@@ -77,5 +81,41 @@
             android:layout_height="wrap_content"
             android:textAlignment="gravity"
             android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/trailers_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="@string/trailers"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorTitle"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/trailers_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:id="@+id/reviews_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="@string/reviews"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorTitle"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/reviews_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay" />
     </LinearLayout>
 </ScrollView>
